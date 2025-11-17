@@ -1,4 +1,6 @@
 #####################  English #####################
+
+
 What are we going to do?
 
 R= As a team, we're going to create an application that works both online and offline, allowing users to view the main methodologies for managing projects.
@@ -27,6 +29,7 @@ Information on Project Management Methodologies: For the first version of the pr
 
 
 #####################  Español #####################
+
 
 ¿Qué vamos a hacer?
 
