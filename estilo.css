@@ -1,0 +1,208 @@
+.title_Proyect{
+  color: #666666;
+  font-size: 40px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el bloque principal */
+  background-color: rgb(150, 250, 200);
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+
+.close-button {
+  background: none;     /* quitar el fondo */
+  border: none;         /* quita el borde */
+  padding: 0;           /* elimina espacio extra */
+  cursor: pointer;      /* mantiene el puntero de clic */
+}
+
+.close-button .icon-x {
+  width: 25px;
+  height: 25px;
+  display: block;       /* Evita espacios raros alrededor */
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.home-button {
+  position: absolute;   /* Lo sacamos del flujo normal */
+  left: 10px;           /* Lo pegamos a la izquierda */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;          /* oculto inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column; /* apila elementos en columna */
+  align-items: stretch;   /* hace que los botones ocupen todo el ancho */
+  gap: 10px;              /* espacio entre elementos */
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar button {
+  background: none;
+  border: 1px solid #666;
+  color: white;
+  padding: 10px;
+  text-align: left;       /* texto alineado a la izquierda */
+  cursor: pointer;
+  width: 100%;            /* ocupa todo el ancho disponible */
+}
+
+.sidebar button:hover {
+  background-color: #555;
+}
+
+.back-button {
+  position: absolute;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.header-content {
+  text-align: center;   /* Centra el texto dentro del bloque */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #e8f5e9;
+  color: #1b5e20;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.screen {
+  display: none;
+  padding: 40px;
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.screen.active {
+  display: block;
+}
+
+h1 {
+  color: #2e7d32;
+}
+
+input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+}
+
+button {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+a {
+  color: #1b5e20;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.slogan {
+  font-style: italic;
+  color: #166e3c;
+}
+
+.back {
+  background-color: #8bc34a;
+}
+
+/* Coloca la barra en la parte superior fija y la hace horizontal */
+.menu {
+  position: fixed;      /* fija la barra en pantalla */
+  top: 0;               /* pegada arriba */
+  left: 0;
+  right: 0;
+  display: flex;        /* alineación horizontal */
+  gap: 12px;            /* espacio entre botones */
+  justify-content: center; /* centra la fila; usa flex-start para alinearlos a la izquierda */
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.95); /* fondo semi/opal para legibilidad */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+/* Opcional: efecto hover */
+.menu button:hover {
+  background: #0b5ed7;
+}
+
+/* Evita que la tarjeta quede debajo de la barra fija */
+.card {
+  margin-top: 72px; /* ajusta según la altura real de .menu */
+  padding: 20px;
+}
+
+.text-body {
+  text-align: justify;
+}
+
+/* CSS: oculta */
+.hidden {
+  display: none !important;
+}

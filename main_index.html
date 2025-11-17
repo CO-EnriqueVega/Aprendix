@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprendix</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <!-- Encabezado global -->
+  <header>
+    <button class="home-button" type="button" onclick="toggleSidebar()">
+      <img class="icon" src="home-icon.jpg" alt="Home">
+    </button>
+    
+    <div class="header-content">
+      <p class="title_Proyect">Aprendix</p>
+      <p class="slogan">"Aprendix: donde el conocimiento crece"</p>
+
+      <button class="back-button" type="button" onclick="goBack()">
+        <img class="icon" src="go_back_button.jpg" alt="Back">
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú de navegación-->
+  <div id="sidebar" class="sidebar">
+    <h3> Menú Lateral</h3>
+    <button class="close-button" type="button" onclick="toggleSidebar()">
+      <img class="icon-x" src="X-icon.png" alt="X">
+    </button>
+    <button onclick="goTo('home')">Home</button>
+    <button>Jugar</button>
+    <button onclick="goTo('aprender')">Aprender</button>
+    <button>Progreso</button>
+    <button>Ayuda</button>
+    <button onclick="goTo('login')">Cerrar Sesión</button>
+  </div>
+
+    <!-- Menú de Superior-->
+  <div id="superior" class="superior">
+    <h3> Menú </h3>
+    <!-- <button></button> -->
+    <button onclick="goTo('descripcion')">Inicio</button>
+    <button>Jugar</button>
+    <button onclick="goTo('aprender')">Aprender</button>
+    <button>Progreso</button>
+    <button>Ayuda</button>
+  </div>
+
+  <!-- Pantalla Login -->
+  <section id="login" class="screen active">
+    <div class="card">
+      <h2>Inicie sesión en su cuenta</h2>
+      <p class="sub">Bienvenido</p>
+      <input type="text" id="loginUser" placeholder="Usuario" />
+      <input type="password" id="loginPass" placeholder="Contraseña" />
+      <button onclick="goTo('home')">Iniciar sesión</button>
+      <p class="link">
+        ¿No tiene una cuenta? 
+        <a href="#" onclick="goTo('register')">Registrarse ahora</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pantalla Registro -->
+  <section id="register" class="screen">
+    <div class="card">
+      <h2>Registremos su cuenta</h2>
+      <p class="sub">¡Hola!</p>
+      <input type="text" id="regName" placeholder="Nombre del usuario" />
+      <input type="email" id="regEmail" placeholder="Correo" />
+      <input type="password" id="regPass" placeholder="Contraseña" />
+      <button onclick="goTo('home')">Registrar</button>
+      <p class="link">
+        ¿Ya tienes una cuenta? 
+        <a href="#" onclick="goTo('login')">Iniciar ahora</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pantalla Principal -->
+  <section id="home" class="screen">
+    <div class="card">
+      <h2>¡Bienvenido a Gestión de Proyectos!</h2>
+      <p>
+        Aprende y mejora tus habilidades en administración de proyectos
+        de manera divertida e interactiva.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pantalla Inicio -->
+  <section id="descripcion" class="screen">
+    <div class="card">
+      <h2>DESCRIPCIÓN</h2>
+      <p class="text-body">
+        Nuestra aplicación offline para administración de proyectos está diseñada para proporcionar a los usuarios acceso a información sobre las principales metodologías de administración de proyectos sin necesidad de conexión a internet.
+      </p>
+      <p class="text-body">
+        La aplicación ofrece contenido de alta calidad y actualizado sobre temas como Agile, Scrum, Kanban y más.
+      </p>
+    </div>
+  </section>
+
+  <!-- Aprender-->
+  <section id="aprender" class="screen">
+    <div class="card">
+      <h2> Metodologías de Software</h2>
+      <button onclick="goTo('Scrum')"> Scrum</button>
+      <button onclick="goTo('Pmbok')"> Pmbok</button>
+      <button onclick="goTo('OPPM')"> OPPM</button>
+      <p class="text-body">
+        Una metodología de desarrollo de software es un conjunto de prácticas, técnicas y herramientas utilizadas por los equipos de desarrollo de software para planificar, diseñar, construir, probar y entregar software de alta calidad de manera eficiente y efectiva. 
+        <br><br> Estas metodologías establecen una estructura para el ciclo de vida del software, que incluye la definición de requisitos, el diseño, la codificación, la prueba, la implementación y el mantenimiento. 
+        <br><br> También establecen roles y responsabilidades para los miembros del equipo, procesos para la gestión de proyectos, la comunicación y el seguimiento del progreso.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pmbok-->
+  <section id="Pmbok" class="screen">
+    <div class="card">
+      <h2> Pmbok </h2>
+      <p class="text-body"> La Guía del PMBOK (Project Management Body of Knowledge) es un estándar reconocido globalmente que recopila un conjunto de buenas prácticas, directrices, procesos y terminología para la gestión exitosa de proyectos, publicado por el Project Management Institute (PMI). Es un marco de referencia, no una metodología rígida.</p>
+      <h3>Características Principales</h3>
+      <ul class="text-body">
+        <li> Estándar Global: Es un estándar ampliamente aceptado y utilizado a nivel mundial en diversas industrias.</li>
+        <li> Basado en Buenas Prácticas: Recopila las prácticas más efectivas y probadas por miles de profesionales de la gestión de proyectos.</li>
+        <li> Marco Adaptable: No es una metodología estricta con pasos obligatorios, sino un marco flexible que se puede adaptar (tailoring) a las necesidades específicas de cada proyecto.</li>
+        <li> Enfoque Evolutivo: Ha evolucionado de un enfoque basado en procesos (ediciones anteriores) a uno basado en principios y dominios de desempeño (séptima edición), centrándose en la entrega de valor y los resultados del proyecto.</li>
+        <li>Lenguaje Común: Proporciona una terminología y un marco de trabajo coherentes, facilitando la comunicación entre los profesionales del proyecto.</li>
+      </ul>
+      <h3>Uso e Importancia</h3>
+      <ul class="text-body">
+        <li>Estandarizar la Gestión: Ayuda a las organizaciones a establecer procesos uniformes para la dirección de proyectos.</li>
+        <li>Mejorar las Tasas de Éxito: La aplicación de sus directrices aumenta las probabilidades de éxito de los proyectos al proporcionar un enfoque estructurado.</li>
+        <li>Base para la Certificación: Es la base para la prestigiosa certificación PMP (Project Management Professional), que valida el conocimiento y la habilidad de los gestores de proyectos.</li>
+        <li>Comunicación Eficaz: Facilita una comunicación fluida entre los interesados al usar un lenguaje y conceptos compartidos.</li>
+      </ul>
+      <h3>Ventajas y Desventajas</h3>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <tr><th>Ventajas</th><th>Desventajas</th></tr>
+        <tr><td>Proporciona una estructura clara y reconocida internacionalmente.</td>
+        <td>Puede percibirse como rígido o burocrático si no se adapta correctamente (especialmente en ediciones anteriores).</td></tr>
+        <tr><td>Aumenta la probabilidad de éxito del proyecto mediante la aplicación de buenas prácticas.</td>
+        <td>Su implementación tiene un costo en tiempo y recursos para capacitación y adaptación.</td></tr>
+        <tr><td>Ofrece un lenguaje común para todos los implicados en el proyecto.</td>
+        <td>Se centra mucho en la planificación y los procesos formales, lo que puede ser menos ágil para proyectos pequeños o de naturaleza cambiante.</td></tr>
+        <tr><td>Permite un mayor control y seguimiento de las etapas del proyecto.</td>
+        <td>El enfoque en la documentación puede llevar a una sobrecarga de trabajo administrativo.</td></tr>
+      </table>
+      <h3><br> Partes y Funcionamiento</h3>
+      <p class="text-body">La estructura del PMBOK ha cambiado en su séptima edición:</p>
+      <ul class="text-body">
+        <li><strong>El Estándar para la Dirección de Proyectos:</strong> Se enfoca en los 12 Principios de la Dirección de Proyectos, que son directrices amplias que guían el comportamiento y la toma de decisiones del equipo del proyecto.</li>
+        <li><strong>La Guía de los Fundamentos para la Dirección de Proyectos:</strong> Describe los ocho Dominios de Desempeño del Proyecto, que son áreas de enfoque clave para que el equipo logre los resultados deseados (ej. Interesados, equipo, enfoque de desarrollo y ciclo de vida, planificación, etc.).</li>
+      </ul>
+      <p class="text-body">En ediciones anteriores (como la sexta), el PMBOK se organizaba en 5 Grupos de Procesos y 10 Áreas de Conocimiento:</p>
+      <ul class="text-body">
+        <li><strong>Grupos de Procesos:</strong> Inicio, Planificación, Ejecución, Seguimiento y Control, y Cierre.</li>
+        <li><strong>Áreas de Conocimiento:</strong> Integración, Alcance, Cronograma, Costos, Calidad, Recursos, Comunicaciones, Riesgos, Adquisiciones e Interesados.</li>
+      </ul>
+      <p class="text-body">El PMBOK funciona como una caja de herramientas de la que el director de proyecto y su equipo extraen los procesos, herramientas y técnicas más adecuados para su proyecto específico, adaptando (haciendo “tailoring”) el marco para maximizar la entrega de valor.</p>
+    </div>
+  </section>
+
+  <!-- Scrum -->
+  <section id="Scrum" class="screen">
+    <div class="card">
+      <h2> Scrum</h2>
+      <p class="text-body"> Scrum es un marco de trabajo (framework) ágil para la gestión y desarrollo de productos complejos, no una metodología rígida. Se basa en la entrega incremental y la colaboración continua para adaptarse rápidamente a los cambios y generar valor de forma eficiente.</p>
+      <h3>Características Principales</h3>
+      <ul class="text-body">
+        <li>Empirismo: Se basa en la transparencia, inspección y adaptación. El conocimiento procede de la experiencia.</li>
+        <li>Equipos Autoorganizados/Autodirigidos: Los equipos son multifuncionales y responsables de gestionar su propio trabajo sin una microgestión externa.</li>
+        <li>Iteraciones Cortas (Sprints): El trabajo se divide en ciclos de duración fija (normalmente de 1 a 4 semanas) llamados Sprints, que resultan en un incremento de producto potencialmente entregable.</li>
+        <li>Flexibilidad y Adaptación: A diferencia de los métodos tradicionales, Scrum abraza el cambio, permitiendo reaccionar a nuevos requisitos del cliente o del mercado durante el proceso.</li>
+        <li>Transparencia: Todos los aspectos del proceso son visibles para todos los involucrados, lo que facilita el seguimiento y la colaboración.</li>
+      </ul>
+      <h3>Usos: </h3>
+      <p class="text-body"> Scrum se utiliza principalmente en el desarrollo de software, pero su aplicación se ha extendido a cualquier proyecto complejo donde los requisitos pueden evolucionar y se necesita una entrega rápida y adaptable. Permite a los equipos abordar tareas complejas dividiéndolas en grupos manejables y priorizados.</p>
+      <h3>Partes (Roles, Eventos y Artefactos)</h3>
+        <h4>Roles</h4>
+        <ul class="text-body">
+          <li>Product Owner (Dueño del Producto): Define y prioriza los elementos del trabajo (historias de usuario) en el Product Backlog para maximizar el valor del producto.</li>
+          <li>Scrum Master: Facilita el proceso de Scrum, ayuda al equipo a entender y aplicar el marco, y elimina impedimentos que obstaculicen el progreso del equipo.</li>
+          <li>Equipo de Desarrollo (Development Team): El grupo de profesionales que realiza el trabajo de entregar un incremento de producto "Terminado" en cada Sprint. Son autoorganizados y multifuncionales.</li>
+        </ul>
+        <h4>Eventos (Ceremonias)</h4>
+        <ul class="text-body">
+          <li>Planificación del Sprint (Sprint Planning): El equipo decide qué trabajo se puede completar en el próximo Sprint y cómo se logrará.</li>
+          <li>Scrum Diario (Daily Scrum/Daily Stand-up): Una reunión diaria de no más de 15 minutos para que el equipo sincronice actividades y planifique el trabajo del día.</li>
+          <li>Revisión del Sprint (Sprint Review): El equipo presenta el incremento de producto completado a los interesados (stakeholders) y se revisa el Product Backlog si es necesario.</li>
+          <li>Retrospectiva del Sprint (Sprint Retrospective): El equipo reflexiona sobre el Sprint pasado para identificar mejoras en su proceso y planifica cómo implementarlas.</li>
+        </ul>
+        <h4>Artefactos</h4>
+        <ul class="text-body">
+          <li>Product Backlog (Pila de Producto): Una lista priorizada de todo el trabajo necesario para el producto.</li>
+          <li>Sprint Backlog (Pila del Sprint): Los elementos del Product Backlog seleccionados para el Sprint actual, junto con el plan para entregarlos.</li>
+          <li>Incremento (Increment): El producto potencialmente entregable resultante de un Sprint, que añade valor a los incrementos anteriores.</li>
+          </ul>
+      <h3>Cómo Funciona</h3>
+      <ol class="text-body">
+        <li>El Product Owner mantiene y prioriza el Product Backlog.</li>
+        <li>El equipo planifica un Sprint, seleccionando elementos del backlog para crear el Sprint Backlog.</li>
+        <li>Durante el Sprint (de 1 a 4 semanas), el equipo trabaja en las tareas, se reúne diariamente en el Daily Scrum para coordinarse.</li>
+        <li>Al final del Sprint, se produce un Incremento del producto, listo para ser potencialmente entregado.</li>
+        <li>Se realiza la Revisión del Sprint y la Retrospectiva para inspeccionar el resultado y mejorar el proceso en el siguiente ciclo.</li>
+      </ol>
+      <h3>Ventajas y Desventajas</h3>
+      <table border="1" cellpadding="8" cellspacing="0">
+      <tr><th>Ventajas</th><th>Desventajas</th></tr>
+      <tr><td>Adaptabilidad: Reacción rápida a cambios de requisitos y mercado.</td>
+      <td>Dependencia del Liderazgo: El éxito puede depender del Scrum Master y la madurez del equipo.</td></tr>
+      <tr><td>Mayor Satisfacción del Cliente: El cliente está involucrado continuamente y ve avances del producto.</td>
+      <td>Exceso de Reuniones: Puede percibirse como burocracia si no se gestionan bien.</td></tr>
+      <tr><td>Transparencia: Todos los involucrados tienen visibilidad del progreso y problemas.</td>
+      <td>Dificultad de Escalabilidad: Puede ser un desafío aplicarlo a proyectos muy grandes o con muchos equipos.</td></tr>
+      <tr><td>Entrega Rápida y Continua: Se entregan incrementos de valor regularmente.</td>
+      <td>Requiere Equipos Maduros: Necesita equipos autoorganizados y disciplinados.</td></tr>
+      <tr><td>Mitigación de Riesgos: Los problemas se identifican y abordan tempranamente.</td>
+      <td>Curso del Proyecto Cambiante: La flexibilidad puede llevar a una reevaluación constante de objetivos.</td></tr>
+      </table>
+    <br><br>
+    <button onclick="window.location.href='Scrum_paginas/index.html'"> Secciones</button>
+    </div>
+  </section>
+
+  <!-- Importa el JS compilado -->
+  <script src="script.js" defer></script>
+
+  <script>
+  function ajustarMargen() {
+  const menu = document.querySelector('.menu');
+  const card = document.querySelector('.card');
+  if (!menu || !card) return;
+  const alto = menu.getBoundingClientRect().height;
+  card.style.marginTop = alto + 'px';
+  }
+
+  // Ajustar al cargar y cuando cambie el tamaño de ventana
+  window.addEventListener('load', ajustarMargen);
+  window.addEventListener('resize', ajustarMargen);
+  </script>
+  </body>
+</html>

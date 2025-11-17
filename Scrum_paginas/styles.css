@@ -1,0 +1,131 @@
+/* ... [MANTENER TODO EL CSS ANTERIOR, PERO AÑADIR ESTO] ... */
+
+/* Nuevo estilo para la navegación entre módulos */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-top: 1px dashed #ccc;
+    padding-top: 20px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.prev-module-btn {
+    background-color: #6c757d; /* Gris */
+    color: white;
+}
+
+.prev-module-btn:hover {
+    background-color: #5a6268;
+}
+
+.next-module-btn {
+    background-color: var(--secondary-color); /* Verde */
+    color: white;
+}
+
+.next-module-btn:hover {
+    background-color: #218838;
+}
+
+/* * NOTA IMPORTANTE: 
+* Puedes eliminar del CSS anterior las clases '.collapsible-content', 
+* '.collapsible-content.active' y '.toggle-btn' ya que no se usarán.
+*/
+
+/* Resaltar el módulo activo en la barra lateral */
+.sidebar a.active {
+    background-color: var(--primary-color);
+    color: white !important;
+    font-weight: bold;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.icon-x {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.close-button {
+  background: none;     /* quitar el fondo */
+  border: none;         /* quita el borde */
+  padding: 0;           /* elimina espacio extra */
+  cursor: pointer;      /* mantiene el puntero de clic */
+}
+
+.close-button .icon-x {
+  width: 25px;
+  height: 25px;
+  display: block;       /* Evita espacios raros alrededor */
+}
+
+.home-button {
+  position: absolute;   /* Lo sacamos del flujo normal */
+  left: 10px;           /* Lo pegamos a la izquierda */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;          /* oculto inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column; /* apila elementos en columna */
+  align-items: stretch;   /* hace que los botones ocupen todo el ancho */
+  gap: 10px;              /* espacio entre elementos */
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar button {
+  background: none;
+  border: 1px solid #666;
+  color: white;
+  padding: 10px;
+  text-align: left;       /* texto alineado a la izquierda */
+  cursor: pointer;
+  width: 100%;            /* ocupa todo el ancho disponible */
+}
+
+.sidebar button:hover {
+  background-color: #555;
+}
